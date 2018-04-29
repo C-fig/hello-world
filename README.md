@@ -1,2 +1,2 @@
-# hello-world I am new to this
-and I love tacos
+# hello-world I am new to this.
+I love tacos
