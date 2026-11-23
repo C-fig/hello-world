@@ -5,14 +5,16 @@ const font='@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,
 // mark in a 240x240 box
 // clean line-art mark in a 300x300 box: sunrise arc, rainbow steam, outlined cup and saucer
 const SPEC=['#D0533F','#E5853D','#E8B847','#7FA868','#4F86B8','#8A64AE'];
-const mark=(c)=>{
+const mark=(c,id,sun=true)=>{
  const rays=[];for(let i=0;i<13;i++){const a=Math.PI*(0.12+0.76*i/12),r1=86,r2=i%2?96:102;
   rays.push(`M${(150-Math.cos(a)*r1).toFixed(1)} ${(125-Math.sin(a)*r1).toFixed(1)}L${(150-Math.cos(a)*r2).toFixed(1)} ${(125-Math.sin(a)*r2).toFixed(1)}`);}
  const tops=[128,110,98,92,104,120];
  const steam=SPEC.map((col,i)=>{const x=122+i*11.2,y0=184,h=y0-tops[i],q=h/4;
   return `<path d="M${x.toFixed(1)} ${y0}c-9 ${-q*0.5} -9 ${-q*1.2} 0 ${-q*2}s9 ${-q*1.5} 0 ${-q*2}" fill="none" stroke="${col}" stroke-width="5" stroke-linecap="round"/>`;}).join('');
- return `<path d="M${(150-Math.cos(Math.PI*0.12)*78).toFixed(1)} ${(125-Math.sin(Math.PI*0.12)*78).toFixed(1)}A78 78 0 0 1 ${(150+Math.cos(Math.PI*0.12)*78).toFixed(1)} ${(125-Math.sin(Math.PI*0.12)*78).toFixed(1)}" fill="none" stroke="${c.sun}" stroke-width="3" stroke-linecap="round"/>
+ const sunArt=sun?`<path d="M${(150-Math.cos(Math.PI*0.12)*78).toFixed(1)} ${(125-Math.sin(Math.PI*0.12)*78).toFixed(1)}A78 78 0 0 1 ${(150+Math.cos(Math.PI*0.12)*78).toFixed(1)} ${(125-Math.sin(Math.PI*0.12)*78).toFixed(1)}" fill="none" stroke="${c.sun}" stroke-width="3" stroke-linecap="round"/>
  <path d="${rays.join('')}" stroke="${c.sun}" stroke-width="3" stroke-linecap="round"/>
+`:'';
+ return `${sunArt}
  ${steam}
  <path d="M92 196H208C208 248 182 270 150 270S92 248 92 196Z" fill="${c.bg}" stroke="${c.ink}" stroke-width="7" stroke-linejoin="round"/>
  <circle cx="120" cy="222" r="5" fill="${c.ink}"/><circle cx="150" cy="222" r="5" fill="${c.ink}"/>
@@ -30,7 +32,7 @@ const divider=(c,cx,y,w)=>`<defs><linearGradient id="spec" gradientUnits="userSp
  <g transform="rotate(-30 ${cx} ${y})"><ellipse cx="${cx}" cy="${y}" rx="8" ry="12" fill="${c.ink}"/><path d="M${cx} ${y-11}c-4 5 4 7 0 11s4 7 0 11" stroke="${c.bg}" stroke-width="1.4" fill="none"/></g>`;
 const stacked=(c,id)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">${style(c)}
  <rect width="640" height="640" fill="${c.bg}"/>
- <g transform="translate(200 6) scale(.8)">${mark(c,id)}</g>
+ <g transform="translate(177.5 -26) scale(.95)">${mark(c,id,false)}</g>
  <text class="the" x="320" y="294" font-size="28" text-anchor="middle">the</text>
  <text class="morning" x="320" y="368" font-size="76" text-anchor="middle">Morning</text>
  <text class="nook" x="320" y="446" font-size="84" text-anchor="middle">Nook</text>
