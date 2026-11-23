@@ -37,8 +37,8 @@ const style=c=>`<style>${font}
  .nook{font-family:Fraunces,Georgia,serif;font-weight:600;fill:${c.ink};letter-spacing:-1px}
  .sub{font-family:"DM Sans",Helvetica,Arial,sans-serif;font-weight:600;fill:${c.ink};letter-spacing:7px}
  .tag{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:300;fill:${c.sub}}</style>`;
-const divider=(c,cx,y,w)=>`<defs><linearGradient id="spec" gradientUnits="userSpaceOnUse" x1="${cx-w}" x2="${cx+w}" y1="0" y2="0"><stop offset="0" stop-color="#C8553D"/><stop offset=".2" stop-color="#E07A3F"/><stop offset=".35" stop-color="#EBA94A"/><stop offset=".5" stop-color="#8FA66B"/><stop offset=".65" stop-color="#4F9A94"/><stop offset=".8" stop-color="#5B7DB1"/><stop offset="1" stop-color="#B0608F"/></linearGradient></defs><path d="M${cx-w} ${y}h${2*w}" stroke="url(#spec)" stroke-width="2.5" stroke-linecap="round"/><circle cx="${cx}" cy="${y}" r="15" fill="${c.bg}"/>
- <g transform="rotate(-30 ${cx} ${y})"><ellipse cx="${cx}" cy="${y}" rx="6" ry="9" fill="${c.ink}"/><path d="M${cx} ${y-8}c-3 4 3 5 0 8s3 5 0 8" stroke="${c.bg}" stroke-width="1.4" fill="none"/></g>`;
+const divider=(c,cx,y,w)=>`<defs><linearGradient id="spec" gradientUnits="userSpaceOnUse" x1="${cx-w}" x2="${cx+w}" y1="0" y2="0"><stop offset="0" stop-color="#C8553D"/><stop offset=".2" stop-color="#E07A3F"/><stop offset=".35" stop-color="#EBA94A"/><stop offset=".5" stop-color="#8FA66B"/><stop offset=".65" stop-color="#4F9A94"/><stop offset=".8" stop-color="#5B7DB1"/><stop offset="1" stop-color="#B0608F"/></linearGradient></defs><path d="M${cx-w} ${y}H${cx-24}M${cx+24} ${y}H${cx+w}" stroke="url(#spec)" stroke-width="7" stroke-linecap="round"/>
+ <g transform="rotate(-30 ${cx} ${y})"><ellipse cx="${cx}" cy="${y}" rx="8" ry="12" fill="${c.ink}"/><path d="M${cx} ${y-11}c-4 5 4 7 0 11s4 7 0 11" stroke="${c.bg}" stroke-width="1.4" fill="none"/></g>`;
 const stacked=(c,id)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">${style(c)}
  <rect width="640" height="640" fill="${c.bg}"/>
  <g transform="translate(200 16)">${mark(c,id)}</g>
@@ -46,7 +46,7 @@ const stacked=(c,id)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 
  <text class="morning" x="320" y="368" font-size="76" text-anchor="middle">Morning</text>
  <text class="nook" x="320" y="446" font-size="84" text-anchor="middle">Nook</text>
  <text class="sub" x="324" y="494" font-size="16" text-anchor="middle">CAFE &amp; LOUNGE</text>
- ${divider(c,320,532,120)}
+ ${divider(c,320,532,160)}
  <text class="tag" x="320" y="582" font-size="22" text-anchor="middle">come for the coffee, stay for the nook.</text></svg>`;
 const horiz=(c,id)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="960" height="280">${style(c)}
  <rect width="960" height="280" fill="${c.bg}"/>
