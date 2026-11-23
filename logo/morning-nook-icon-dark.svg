@@ -4,8 +4,7 @@
  <path d="M122.0 184c-9 -7 -9 -16.8 0 -28s9 -21 0 -28" fill="none" stroke="#D0533F" stroke-width="5" stroke-linecap="round"/><path d="M133.2 184c-9 -9.25 -9 -22.2 0 -37s9 -27.75 0 -37" fill="none" stroke="#E5853D" stroke-width="5" stroke-linecap="round"/><path d="M144.4 184c-9 -10.75 -9 -25.8 0 -43s9 -32.25 0 -43" fill="none" stroke="#E8B847" stroke-width="5" stroke-linecap="round"/><path d="M155.6 184c-9 -11.5 -9 -27.599999999999998 0 -46s9 -34.5 0 -46" fill="none" stroke="#7FA868" stroke-width="5" stroke-linecap="round"/><path d="M166.8 184c-9 -10 -9 -24 0 -40s9 -30 0 -40" fill="none" stroke="#4F86B8" stroke-width="5" stroke-linecap="round"/><path d="M178.0 184c-9 -8 -9 -19.2 0 -32s9 -24 0 -32" fill="none" stroke="#8A64AE" stroke-width="5" stroke-linecap="round"/>
  <path d="M92 196H208C208 248 182 270 150 270S92 248 92 196Z" fill="#24170F" stroke="#FBF3E6" stroke-width="7" stroke-linejoin="round"/>
  <circle cx="120" cy="222" r="5" fill="#FBF3E6"/><circle cx="150" cy="222" r="5" fill="#FBF3E6"/>
- <path d="M123 242c10 5 24 4 35-8" fill="none" stroke="#FBF3E6" stroke-width="5" stroke-linecap="round"/>
- <path d="M160 230c2.5 1.5 4 3.5 4.5 6.5" fill="none" stroke="#FBF3E6" stroke-width="3.5" stroke-linecap="round"/>
+ <path d="M123 237c9 8 24 9 33-3" fill="none" stroke="#FBF3E6" stroke-width="5" stroke-linecap="round"/>
  <path d="M206 208c26-6 34 28-8 40" fill="none" stroke="#FBF3E6" stroke-width="7" stroke-linecap="round"/>
  <path d="M70 280H230" stroke="#FBF3E6" stroke-width="7" stroke-linecap="round"/>
  <path d="M90 288c14 12 106 12 120 0" fill="none" stroke="#FBF3E6" stroke-width="5" stroke-linecap="round"/></g></svg>

@@ -16,8 +16,7 @@ const mark=(c)=>{
  ${steam}
  <path d="M92 196H208C208 248 182 270 150 270S92 248 92 196Z" fill="${c.bg}" stroke="${c.ink}" stroke-width="7" stroke-linejoin="round"/>
  <circle cx="120" cy="222" r="5" fill="${c.ink}"/><circle cx="150" cy="222" r="5" fill="${c.ink}"/>
- <path d="M123 242c10 5 24 4 35-8" fill="none" stroke="${c.ink}" stroke-width="5" stroke-linecap="round"/>
- <path d="M160 230c2.5 1.5 4 3.5 4.5 6.5" fill="none" stroke="${c.ink}" stroke-width="3.5" stroke-linecap="round"/>
+ <path d="M123 237c9 8 24 9 33-3" fill="none" stroke="${c.ink}" stroke-width="5" stroke-linecap="round"/>
  <path d="M206 208c26-6 34 28-8 40" fill="none" stroke="${c.ink}" stroke-width="7" stroke-linecap="round"/>
  <path d="M70 280H230" stroke="${c.ink}" stroke-width="7" stroke-linecap="round"/>
  <path d="M90 288c14 12 106 12 120 0" fill="none" stroke="${c.ink}" stroke-width="5" stroke-linecap="round"/>`;};
